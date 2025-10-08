@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- Government app network security policy -->
+    <domain-config cleartextTrafficPermitted="false">
+        <!-- Production government domains -->
+        <domain includeSubdomains="true">gov.in</domain>
+        <domain includeSubdomains="true">nic.in</domain>
+        <domain includeSubdomains="true">pmajay.gov.in</domain>
+        <domain includeSubdomains="true">supabase.co</domain>
+        
+        <!-- Development domains (remove in production) -->
+        <domain includeSubdomains="true">localhost</domain>
+        <domain includeSubdomains="true">127.0.0.1</domain>
+        
+        <!-- Certificate pinning for enhanced security -->
+        <pin-set expiration="2025-12-31">
+            <pin digest="SHA-256">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</pin>
+        </pin-set>
+    </domain-config>
+    
+    <!-- Base configuration for all other domains -->
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system"/>
+        </trust-anchors>
+    </base-config>
+</network-security-config>
