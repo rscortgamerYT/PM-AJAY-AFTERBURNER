@@ -1,4 +1,5 @@
 # PM-AJAY Agency Mapping Platform
+[![Flutter CI](https://github.com/rscortgamerYT/PM-AJAY-AFTERBURNER/actions/workflows/flutter_ci.yml/badge.svg)](https://github.com/rscortgamerYT/PM-AJAY-AFTERBURNER/actions/workflows/flutter_ci.yml)
 
 A comprehensive Flutter application for managing PM-AJAY (Pradhan Mantri Anusuchit Jaati Abhyuday Yojana) projects with Supabase backend integration.
 
